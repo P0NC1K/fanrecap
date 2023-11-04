@@ -1,0 +1,210 @@
+/* I INCLUDED CSS FOR category-page.html, privacy-policy and redirecting.html here */
+
+/* CATEGORY PAGE CSS */
+
+.category-title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Roboto-bold", "Helvetica Neue", Helvetica, Arial;
+  margin: 25px 0 25px 0;
+}
+
+/* PRIVACY POLICY STYLES */
+
+.policy-title {
+  font-size: 3rem;
+  margin-block: 20px;
+}
+
+.policy-content {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  list-style: circle;
+  margin-top: 30px;
+  width: 70%;
+}
+
+.policy-content a {
+  color: #4db2ec;
+}
+
+ul.policy-content {
+  list-style: disc !important;
+}
+
+/* REDIRECTING STYLES */
+
+.loading-text b {
+  font-size: 2.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.loading-text {
+  margin-top: 20px;
+}
+
+.main-container-span {
+  height: 100vh;
+}
+
+.loading-text,
+.loading-bar_container {
+  text-align: center;
+}
+
+.loading-bar_container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ============================== */
+
+/* MAIN GRID */
+#main_grid {
+  margin-top: 10px;
+}
+
+.main_grid-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  height: 70vh;
+  gap: 10px;
+}
+
+.flex-carousel-container .img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 50%;
+}
+
+.main_grid_card {
+  width: 100%;
+  height: 100%;
+  background: turquoise;
+  background-size: cover; /* or background-size: contain; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.span-2 {
+  grid-row: 1/3;
+  grid-column: 2/4;
+}
+.main_grid_card-header {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  position: absolute;
+  margin: 8% 5%;
+  bottom: 0;
+}
+
+.span-2 .main_grid_card-header {
+  font-size: 3.6rem;
+}
+
+/* LATEST NEWS */
+
+.latest-news span:first-child {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  padding-right: 20px;
+}
+.latest-news {
+  position: relative;
+}
+
+.latest-news-wrap {
+  padding-top: 50px;
+}
+
+.latest-news_line {
+  width: 100%;
+  height: 4px;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 50%;
+}
+
+/* NEWS GRID */
+
+#news-grid {
+  margin-top: 20px;
+}
+
+/* PREV NEXT BTNS */
+
+.page-btns {
+  margin-top: 40px;
+}
+
+.page-btns button {
+  color: #b7b7b7;
+  background: transparent;
+  border: 1px solid #b7b7b7;
+  padding: 3px 7px;
+}
+
+.page-btns button:last-child {
+  margin-left: 5px;
+}
+
+.page-btns button:hover {
+  background-color: #4db2ec;
+  color: white;
+}
+
+@media screen and (max-width: 1100px) {
+  .main_grid_card-header {
+    font-size: 1.7rem;
+  }
+  .span-2 .main_grid_card-header {
+    font-size: 2.5rem;
+  }
+  .policy-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main_grid {
+    height: 130vh;
+  }
+
+  .main_grid-container {
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.8fr;
+  }
+  .flex-carousel-container {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: block;
+    display: flex;
+    gap: 20px;
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+
+  .main_grid_card {
+    grid-column: 1/4;
+  }
+
+  .span-2 {
+    grid-row: 2/3;
+    grid-column: 1/4;
+  }
+
+  .flex-carousel-container div {
+    width: 50vh;
+  }
+}
