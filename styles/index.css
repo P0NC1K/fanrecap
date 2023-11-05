@@ -125,6 +125,7 @@ ul.policy-content {
   background-image: url('https://i0.wp.com/fanrecap.com/wp-content/uploads/654292abe21c9.jpg?resize=696%2C383&ssl=1');
   background-size: cover; /* or background-size: contain; */
   background-repeat: no-repeat;
+  background-clip: content-box;
   background-position: center center;
   position: relative;
 }
@@ -263,7 +264,8 @@ ul.policy-content {
   
   .secondary-posts {
     display: block;
-    height: 30%;
+    height: 35%;
+    min-height: 150px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;

@@ -164,7 +164,6 @@ header {
 
 .news-grid_card_img-container img {
   width: 100%;
-  height: 250px;
   object-fit: cover;
 }
 
