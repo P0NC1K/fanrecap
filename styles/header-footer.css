@@ -300,6 +300,10 @@ footer {
   padding: 0;
 }
 
+.nav-link:hover .nav_dropdown {
+  display: none;
+}
+
 .menu-chevron {
   float: right;
 }
@@ -352,7 +356,6 @@ footer {
   footer .copyright, .footer-links ul li a{
     font-size: 11px;
   }
-  
 
   .nav_dropdown {
     display: none;
@@ -360,7 +363,7 @@ footer {
 
  .display-nav-dropdown {
    position: static;
-  display: block;
+  display: block !important;
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
