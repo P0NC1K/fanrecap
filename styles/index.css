@@ -1,5 +1,12 @@
 /* I INCLUDED CSS FOR category-page.html, privacy-policy and redirecting.html here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
+body {
+  margin: 0;
+}
 /* CATEGORY PAGE CSS */
 
 .category-title {
@@ -63,14 +70,44 @@ ul.policy-content {
 /* MAIN GRID */
 #main_grid {
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
 }
 
 .main_grid-container {
-  display: grid;
+  display: flex;
+  width: 100%;
   position: relative;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr;
-  height: 70vh;
+  height: 45vw;
+  max-height: 550px;
+  gap: 10px;
+}
+
+.main-posts {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secondary-posts {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 10px;
+}
+
+.span-2 {
+  grid-row: 1/3;
+}
+
+.column-posts {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   gap: 10px;
 }
 
@@ -85,17 +122,13 @@ ul.policy-content {
 .main_grid_card {
   width: 100%;
   height: 100%;
-  background: turquoise;
+  background-image: url('https://i0.wp.com/fanrecap.com/wp-content/uploads/654292abe21c9.jpg?resize=696%2C383&ssl=1');
   background-size: cover; /* or background-size: contain; */
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
 }
 
-.span-2 {
-  grid-row: 1/3;
-  grid-column: 2/4;
-}
 .main_grid_card-header {
   font-size: 2rem;
   font-weight: 700;
@@ -124,7 +157,7 @@ ul.policy-content {
 }
 
 .latest-news-wrap {
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 .latest-news_line {
@@ -150,6 +183,7 @@ ul.policy-content {
 .page-btns button {
   color: #b7b7b7;
   background: transparent;
+  cursor: pointer;
   border: 1px solid #b7b7b7;
   padding: 3px 7px;
 }
@@ -163,12 +197,24 @@ ul.policy-content {
   color: white;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1140px) {
   .main_grid_card-header {
-    font-size: 1.7rem;
+    font-size: 15px;
   }
   .span-2 .main_grid_card-header {
-    font-size: 2.5rem;
+    font-size: 32px;
+  }
+  .policy-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1018px) {
+  .main_grid_card-header {
+    font-size: 12px;
+  }
+  .span-2 .main_grid_card-header {
+    font-size: 20px;
   }
   .policy-content {
     width: 100%;
@@ -176,15 +222,73 @@ ul.policy-content {
 }
 
 @media screen and (max-width: 768px) {
+  .main-container {
+    padding: 0;
+  }
+
   #main_grid {
-    height: 130vh;
+    height: 80vh;
   }
 
   .main_grid-container {
+    flex-direction: column;
     height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 0.8fr;
+    max-height: none;
   }
+  
+  .main-posts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-posts h3 {
+    font-size: 22px;
+    margin: 15px;
+  }
+  
+  .secondary-posts {
+    display: block;
+    height: 30%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  .secondary-posts h3 {
+    font-size: 13px !important;
+    margin: 0 6px 15px 15px;
+  }
+
+  .secondary-posts .main_grid_card {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+    border-width: 0 5px;
+    border-style: solid;
+    border-color: transparent;
+  }
+
+  .secondary-posts .grid-1 {
+    border-left: none;
+  }
+
+  .secondary-posts .grid-3 {
+    border-right: none;
+  }
+
+  .main_grid_card-header {
+    white-space: wrap;
+  }
+
+  .main_news {
+    padding: 0 20px;
+  }
+
+  .page-btns {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  
   .flex-carousel-container {
     overflow-y: hidden;
     overflow-x: auto;
@@ -192,15 +296,6 @@ ul.policy-content {
     display: flex;
     gap: 20px;
     grid-row: 3/4;
-    grid-column: 1/4;
-  }
-
-  .main_grid_card {
-    grid-column: 1/4;
-  }
-
-  .span-2 {
-    grid-row: 2/3;
     grid-column: 1/4;
   }
 
