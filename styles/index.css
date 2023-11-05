@@ -185,7 +185,22 @@ ul.policy-content {
   background: transparent;
   cursor: pointer;
   border: 1px solid #b7b7b7;
-  padding: 3px 7px;
+  padding: 4px 8px 5px;
+  vertical-align: middle;
+}
+
+.page-btns button.disabled{
+  border: 1px solid #dcdcdc;
+  color: #dcdcdc;
+}
+
+.page-btns button i{
+  line-height: 2px;
+}
+
+.fa-chevron-right:before, .fa-chevron-left:before{
+  font-size: 9px;
+  line-height: 2px;
 }
 
 .page-btns button:last-child {
