@@ -39,6 +39,9 @@ ul.policy-content {
   list-style: disc !important;
 }
 
+ul.policy-content li {
+  margin-left: 15px;
+}
 /* REDIRECTING STYLES */
 
 .loading-text b {
@@ -159,6 +162,7 @@ ul.policy-content {
 
 .latest-news-wrap {
   padding-top: 70px;
+  overflow: hidden;
 }
 
 .latest-news_line {
