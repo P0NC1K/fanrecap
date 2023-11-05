@@ -262,10 +262,6 @@ footer {
     grid-template-columns: 1.2fr;
   }
 
-  header {
-    padding: 0 20px;
-  }
-
   html {
     font-size: 10px;
   }
@@ -317,6 +313,10 @@ footer {
 .nav-link  a{
   display: inline-block;
   width: 90%;
+}
+
+.logo-container img {
+  max-width: 100px;
 }
 
 .close-btn {

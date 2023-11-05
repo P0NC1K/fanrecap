@@ -19,8 +19,15 @@ body {
 /* PRIVACY POLICY STYLES */
 
 .policy-title {
-  font-size: 3rem;
+  font-family: roboto, sans-serif;
+  color: #111;
+  font-size: 27px;
+  font-weight: 400;
   margin-block: 20px;
+}
+
+.main-title {
+  font-size: 30px;
 }
 
 .policy-content {
@@ -242,7 +249,7 @@ ul.policy-content li {
 }
 
 @media screen and (max-width: 768px) {
-  .main-container {
+  .main_full {
     padding: 0;
   }
 
@@ -307,7 +314,6 @@ ul.policy-content li {
 
   .page-btns {
     margin-top: 20px;
-    padding: 0 20px;
   }
   
   .flex-carousel-container {
